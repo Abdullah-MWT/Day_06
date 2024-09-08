@@ -11,43 +11,12 @@
         <h1>Generate a <br><span>Random Password</span></h1>
         <div class="display">
             <input type="text" id="password" placeholder="PassWord">
-            <img src="./images/copy.png" alt="copy-sign">
+            <img id="img1" src="./images/copy.png" alt="copy-sign">
         </div>
-        <button><img src="./images/generate.png" alt="Generate-icon">Generate PassWord</button>
+        <button class="btn"><img src="./images/generate.png" alt="Generate-icon">Generate PassWord</button>
     </div>
 
-<script>
-
-const password = document.querySelector('#password');
-const length = 8;
-
-const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-const numbers = '0123456789';
-const symbols = '@#$%^&*()_+~|{}[]></-=?,.';
-
-const allChars = upperCase + lowerCase + numbers + symbols;
-
-
-function createPassword(){
-    let password = '';
-    password += upperCase[Math.floor(Math.random() * upperCase.length)]
-    password += lowerCase[Math.floor(Math.random() * lowerCase.length)]
-    password += numbers[Math.floor(Math.random() * numbers.length)]
-    password += symbols[Math.floor(Math.random() * symbols.length)]
-    password += allChars[Math.floor(Math.random() * allChars.length)]
-    
-     while(length > password.length){
-
-     }
-    alert(password)
-}
-
-createPassword()
-
-
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
